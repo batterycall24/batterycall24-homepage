@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://batterycall24.com/sitemap.xml

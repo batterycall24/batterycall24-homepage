@@ -1,14 +1,14 @@
 {
   "name": "배터리콜24",
-  "short_name": "배터리콜24",
-  "start_url": "/",
+  "short_name": "배콜",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#080808",
-  "theme_color": "#080808",
+  "theme_color": "#ffd400",
   "icons": [
     {
-      "src": "/assets/baecall-icon.png",
-      "sizes": "1254x1254",
+      "src": "assets/brand-symbol.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]
