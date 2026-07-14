@@ -1,0 +1,5 @@
+/gunpo/
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/gunpo/*
+  Cache-Control: no-cache, no-store, must-revalidate
