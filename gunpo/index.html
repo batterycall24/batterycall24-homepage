@@ -36,6 +36,27 @@
 
 /* WEB 3.20: 하단 상담 버튼 글자 크기·굵기 강화 */
 .sticky a{font-size:16px;font-weight:900}
+
+/* WEB 3.21 - 최근 현장 기록 */
+.live-section{padding-top:74px;padding-bottom:74px;background:linear-gradient(180deg,#0b0b0b,#111)}
+.live-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:24px}
+.live-head h2{font-size:clamp(32px,4.5vw,50px);line-height:1.08;letter-spacing:-.055em;margin:0}
+.live-head h2 span{color:var(--y)}
+.live-head p{max-width:520px;color:var(--m);margin:0}
+.live-status{display:inline-flex;align-items:center;gap:8px;color:#ddd;font-size:13px;font-weight:800;margin-bottom:10px}
+.live-status i{width:9px;height:9px;border-radius:50%;background:#26d65f;box-shadow:0 0 0 5px rgba(38,214,95,.12);animation:livePulse 1.8s ease-in-out infinite}
+@keyframes livePulse{0%,100%{opacity:1}50%{opacity:.45}}
+.live-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.live-item{display:flex;flex-direction:column;min-height:186px;padding:22px;border:1px solid #2d2d2d;background:#171717;border-radius:18px;transition:transform .2s ease,border-color .2s ease,background .2s ease}
+.live-item:hover{transform:translateY(-2px);border-color:#6b5a00;background:#1b1b1b}
+.live-date{display:inline-flex;align-self:flex-start;background:var(--y);color:#111;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:950;letter-spacing:.02em}
+.live-place{color:var(--y);font-size:14px;font-weight:900;margin-top:17px}
+.live-item h3{font-size:21px;line-height:1.3;letter-spacing:-.035em;margin:6px 0 8px}
+.live-item p{color:var(--m);font-size:14px;margin:0}
+.live-note{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:18px;color:#8e8e8e;font-size:12px}
+.live-note a{color:#fff;border-bottom:1px solid #666;font-weight:800}
+@media(max-width:760px){.live-section{padding:58px 0}.live-head{display:block}.live-head p{margin-top:12px}.live-list{grid-template-columns:1fr;gap:10px}.live-item{min-height:0;padding:18px 19px}.live-item h3{font-size:19px}.live-note{align-items:flex-start;flex-direction:column;gap:8px}}
+
 </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"AutomotiveBusiness","name":"배터리콜24 군포 출장배터리","alternateName":"배콜","url":"https://batterycall24.com/gunpo/","image":"https://batterycall24.com/assets/hero-desktop.webp","telephone":"+82-10-2894-5687","description":"군포 전 지역 24시간 자동차 배터리 출장 교체, 배터리 진단, 충전전압 확인, 수입차 교환등록","areaServed":["군포시","산본동","금정동","당동","당정동","부곡동","대야미동","도마교동","송부동"],"openingHours":"Mo-Su 00:00-24:00","parentOrganization":{"@type":"Organization","name":"배터리콜24","url":"https://batterycall24.com/"},"sameAs":["https://naver.me/GV2dqShC","https://talk.naver.com/profile/c/batterycall24","https://m.blog.naver.com/batterycall24"]}
@@ -68,6 +89,18 @@
     <section id="area"><div class="wrap"><div class="section-head"><h2>군포 어느 동네든<br><span>현재 위치부터 알려주세요</span></h2><p>군포는 배터리콜24의 핵심 출동 지역입니다. 주택가, 아파트 지하주차장, 회사, 물류단지, 도로변 등 차량이 있는 현장으로 방문합니다.</p></div><div class="area-map"><div class="area-card"><h3>군포 출장 가능 지역</h3><p>정확한 도착 시간은 출발 위치와 교통 상황을 확인해 안내합니다.</p><div class="dong-list"><span class="primary">산본동</span><span class="primary">금정동</span><span class="primary">당동</span><span class="primary">당정동</span><span>부곡동</span><span>대야미동</span><span>도마교동</span><span>송부동</span><span>군포동</span><span>재궁동</span><span>오금동</span><span>수리동</span><span>궁내동</span><span>광정동</span></div></div><div class="info-card"><h3>상담 시 알려주시면 빠릅니다</h3><p>차종·연식·현재 위치·시동 상태를 알려주시면 배터리 규격과 출동 가능 시간을 빠르게 확인할 수 있습니다.</p><div class="checks"><div class="check"><i>1</i><div><b>차종과 연식</b><span>예: 2014년식 SM3, 2020년식 BMW X3</span></div></div><div class="check"><i>2</i><div><b>현재 위치</b><span>예: 군포 산본동 아파트 지하주차장</span></div></div><div class="check"><i>3</i><div><b>현재 증상</b><span>시동 불량, 완전 방전, 경고등 등을 알려주세요.</span></div></div></div></div></div></div></section>
 
     <section id="service"><div class="wrap"><div class="section-head"><h2>현장에서 제공하는<br><span>실제 작업 서비스</span></h2><p>단순히 새 배터리를 장착하는 데서 끝나지 않고, 차량이 정상적으로 충전되는지 확인하는 과정까지 포함합니다.</p></div><div class="service-grid"><article class="service-card"><img src="/assets/service-battery.webp" alt="군포 자동차 신품 배터리 출장 교체" loading="lazy"><div class="service-body"><small>SERVICE 01</small><h3>신품 배터리 교체</h3><p>차종과 사용 환경에 맞는 규격을 확인해 장착합니다.</p></div></article><article class="service-card"><img src="/assets/diagnosis-voltage.webp" alt="군포 자동차 배터리 상태와 충전전압 진단" loading="lazy"><div class="service-body"><small>SERVICE 02</small><h3>배터리·충전전압 진단</h3><p>교체 전 상태와 교체 후 차량 충전 상태를 확인합니다.</p></div></article><article class="service-card"><img src="/assets/service-autel-safe-v26.webp" alt="AUTEL 진단기를 이용한 수입차 배터리 교환등록" loading="lazy"><div class="service-body"><small>SERVICE 03</small><h3>진단기·교환등록</h3><p>수입차와 일부 차량의 배터리 교환등록을 지원합니다.</p></div></article><article class="service-card"><img src="/assets/service-terminal.jpg" alt="자동차 배터리 단자 보호 작업" loading="lazy"><div class="service-body"><small>SERVICE 04</small><h3>단자 보호·마무리</h3><p>단자 상태를 확인하고 필요한 마무리 작업을 진행합니다.</p></div></article></div></div></section>
+
+<section class="live-section" id="recent-work"><div class="wrap">
+  <div class="live-status"><i aria-hidden="true"></i> 군포 현장 기록이 계속 업데이트되고 있습니다</div>
+  <div class="live-head"><h2>최근 군포<br><span>출장 작업 기록</span></h2><p>군포에서 실제로 진행한 최근 작업을 날짜순으로 정리했습니다.</p></div>
+  <div class="live-list">
+    <article class="live-item"><time class="live-date" datetime="2026-07-15">2026.07.15</time><div class="live-place">군포 산본동</div><h3>SM3 DIN74L 출장 교체</h3><p>당근 후기를 보고 연락한 고객 차량의 상태를 확인하고 신품 배터리로 교체했습니다.</p></article>
+    <article class="live-item"><time class="live-date" datetime="2026-07-11">2026.07.11</time><div class="live-place">군포 산본동</div><h3>BMW 530i AGM105 교체</h3><p>6년 사용한 순정 배터리를 점검하고 AGM105 장착과 교환등록을 진행했습니다.</p></article>
+    <article class="live-item"><time class="live-date" datetime="2026-07-04">2026.07.04</time><div class="live-place">군포 복합물류단지</div><h3>봉고EV 12V 배터리 6대 작업</h3><p>업무용 전기화물차 6대를 순차적으로 점검하고 보조배터리 작업을 진행했습니다.</p></article>
+  </div>
+  <div class="live-note"><span>최근 기록 업데이트: 2026.07.16</span><a href="#cases">군포 작업사례 자세히 보기 ›</a></div>
+</div></section>
+
 
     <section class="cases" id="cases"><div class="wrap"><div class="section-head"><h2>배터리콜24가 직접 진행한<br><span style="color:#8b6b00">군포 작업사례</span></h2><p style="color:#555">실제 군포 현장 사진과 자세한 작업 과정은 네이버 블로그 후기에서 확인할 수 있습니다. 카드를 누르면 해당 작업기로 이동합니다.</p></div><div class="case-grid"><a class="case-card" href="https://blog.naver.com/batterycall24/224345643918" target="_blank" rel="noopener noreferrer" aria-label="군포 산본 14년식 SM3 배터리 출장 교체 블로그 후기 보기"><img src="/gunpo/assets/sm3-blog.png" alt="군포 산본동 14년식 SM3 델코 DIN74L 배터리 출장 교체"><div class="case-body"><small>군포 산본동 · 일반 승용차</small><h3>14년식 SM3 델코 DIN74L 출장 교체</h3><p>당근 후기를 보고 연락한 고객 차량입니다. 점프만 반복하기보다 기존 배터리 상태를 확인하고 교체한 과정을 담았습니다.</p></div></a><a class="case-card" href="https://blog.naver.com/batterycall24/224317604182" target="_blank" rel="noopener noreferrer" aria-label="군포 산본 BMW 530i AGM105 배터리 교체 블로그 후기 보기"><img src="/gunpo/assets/bmw530i-blog.png" alt="군포 산본동 BMW 530i 바르타 AGM105 배터리 교체"><div class="case-body"><small>군포 산본동 · 수입차 AGM</small><h3>BMW 530i 바르타 AGM105 교체</h3><p>6년 사용한 순정 배터리 상태를 진단하고 AGM105 신품 교체와 배터리 교환등록까지 진행한 사례입니다.</p></div></a><a class="case-card" href="https://blog.naver.com/batterycall24/224341573243" target="_blank" rel="noopener noreferrer" aria-label="군포 복합물류단지 봉고EV 6대 배터리 교체 블로그 후기 보기"><img src="/gunpo/assets/bongoev-blog.png" alt="군포 복합물류단지 봉고EV 6대 로케트 80L 배터리 교체"><div class="case-body"><small>군포 복합물류단지 · 법인 차량</small><h3>봉고EV 6대 업무용 차량 단체 교체</h3><p>호우경보 속에서도 회사 운행 일정을 고려해 6대를 한 현장에서 순차적으로 교체한 법인·상용차 작업입니다.</p></div></a></div></div></section>
     <section><div class="wrap"><div class="section-head"><h2>배터리만 바꾸고<br><span>끝내지 않는 이유</span></h2><p>배터리가 방전됐다고 해서 원인이 항상 배터리 노후화인 것은 아닙니다. 현재 상태를 확인해야 불필요한 교체나 반복 방전을 줄일 수 있습니다.</p></div><div class="principle-grid"><div class="principle-photo"><img src="/assets/diagnosis-voltage.webp" alt="자동차 배터리 교체 후 발전기 충전전압 확인"></div><div class="principle-copy"><small style="color:var(--y);font-weight:950">BATTERYCALL24 STANDARD</small><h3>교체보다 진단이 먼저</h3><p style="color:var(--m)">현장에서 측정한 결과를 바탕으로 현재 상태를 설명하고 필요한 작업을 안내합니다.</p><div class="checks"><div class="check"><i>✓</i><div><b>기존 배터리 성능 확인</b><span>현재 배터리의 전압과 시동 성능을 확인합니다.</span></div></div><div class="check"><i>✓</i><div><b>차량 규격에 맞는 신품 장착</b><span>일반형, DIN, AGM 등 차량에 맞는 규격을 준비합니다.</span></div></div><div class="check"><i>✓</i><div><b>교체 후 충전 상태 점검</b><span>발전기 충전전압이 정상 범위인지 확인합니다.</span></div></div><div class="check"><i>✓</i><div><b>필요 차량 교환등록</b><span>차종과 시스템에 따라 진단기 등록을 지원합니다.</span></div></div></div></div></div></div></section>
