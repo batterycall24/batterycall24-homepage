@@ -83,10 +83,12 @@
     })(window, document, "clarity", "script", "xm5kks2nqr");
   </script>
 
+<link rel="stylesheet" href="assets/mobile-navigation.css">
+<script src="assets/mobile-navigation.js" defer></script>
 </head>
 <body>
 <div class="topbar">24시간 연중무휴 · 군포 · 안양 · 의왕 중심 신속 출동</div>
-<header>
+<header class="site-header">
 <div class="wrap nav">
 <a class="brand" href="#top">
 <img class="brand-symbol" src="assets/brand-symbol.png" alt="배콜 브랜드 심볼">
@@ -110,6 +112,14 @@
 <small>24시간 전화 문의</small>
 <b>010-2894-5687</b>
 </a>
+<button class="mobile-menu-button" type="button" aria-expanded="false" aria-controls="mobileMenu">☰ 메뉴</button>
+</div>
+<div class="mobile-menu-panel" id="mobileMenu">
+<a href="/#service">서비스</a>
+<a href="/#inventory">보유 재고</a>
+<a href="/cases/">작업후기</a>
+<a href="/#area">출장 지역</a>
+<a href="/#contact">상담 문의</a>
 </div>
 </header>
 <main id="top">
@@ -132,6 +142,7 @@
 <a class="btn phone-cta" href="tel:01028945687">지금 전화하기 010-2894-5687</a>
 <a class="btn kakao-cta" href="https://pf.kakao.com/_SxggwX/chat" target="_blank" rel="noopener">카카오톡 채널 상담</a>
 <a class="btn naver-cta" href="https://talk.naver.com/profile/c/batterycall24" target="_blank" rel="noopener">네이버 톡톡 상담</a>
+<a class="btn cases-cta" href="/cases/">실제 작업후기 보기</a>
 </div>
 <div class="hero-links">
 <a class="place-link" href="https://naver.me/GV2dqShC" target="_blank" rel="noopener">네이버 플레이스</a>
@@ -604,10 +615,10 @@
   });
 })();
 </script>
-<div class="sticky">
-<a class="call" href="tel:01028945687">전화 문의</a>
-<a class="kakao" href="https://pf.kakao.com/_SxggwX/chat" target="_blank" rel="noopener">카카오톡</a>
-<a class="naver" href="https://talk.naver.com/profile/c/batterycall24" target="_blank" rel="noopener">네이버톡톡</a>
+<div class="mobile-bottom-nav" aria-label="모바일 빠른 메뉴">
+<a class="mobile-bottom-call" href="tel:01028945687">전화</a>
+<a class="mobile-bottom-cases" href="/cases/">작업후기</a>
+<a class="mobile-bottom-chat" href="https://talk.naver.com/profile/c/batterycall24" target="_blank" rel="noopener">상담</a>
 </div>
 </body>
 </html>
