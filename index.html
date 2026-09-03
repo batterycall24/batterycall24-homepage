@@ -552,69 +552,7 @@
   video.addEventListener('ended',showButton);
 })();
 </script>
-<aside class="event-banner" id="freeCheckEvent" aria-labelledby="freeCheckTitle" aria-hidden="true">
-<div class="event-banner__top">
-</div>
-<div class="event-banner__inner">
-<button class="event-banner__close" id="eventClose" type="button" aria-label="이벤트 안내 닫기">×</button>
-<span class="event-banner__eyebrow">배터리 가격 안내</span>
-<h2 id="freeCheckTitle">가격 인상 전 재고를 미리 확보했습니다</h2>
-<p class="event-banner__period">확보 재고 소진 시까지 인상 전 가격 적용</p>
-<div class="event-banner__details" id="eventDetails">
-<strong>고객 부담을 줄이기 위해 미리 준비했습니다.</strong>
-<ul>
-<li>델코·로케트 주요 규격 선매입</li>
-<li>확보 재고는 인상 전 가격으로 판매</li>
-<li>차종·연식 확인 후 맞는 규격 안내</li>
-<li>규격별 재고 소진 시 순차 종료</li>
-</ul>
-</div>
-<div class="event-banner__actions">
-<button class="event-banner__more" id="eventMore" type="button" aria-expanded="false" aria-controls="eventDetails">이벤트 자세히 보기</button>
-<a class="event-banner__call" href="tel:01028945687">전화 문의</a>
-</div>
-<button class="event-banner__today" id="eventToday" type="button">오늘 하루 보지 않기</button>
-</div>
-</aside>
-<script>
-(function(){
-  const banner=document.getElementById('freeCheckEvent');
-  const closeButton=document.getElementById('eventClose');
-  const moreButton=document.getElementById('eventMore');
-  const todayButton=document.getElementById('eventToday');
-  if(!banner||!closeButton||!moreButton||!todayButton) return;
 
-  const EVENT_START='2026-08-08';
-  const HIDE_KEY='batterycall24_price_stock_hide_date';
-  const kstDateString=()=>new Intl.DateTimeFormat('en-CA',{
-    timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'
-  }).format(new Date());
-  const today=kstDateString();
-
-  if(today>=EVENT_START&&localStorage.getItem(HIDE_KEY)!==today){
-    window.setTimeout(function(){
-      banner.classList.add('is-visible');
-      banner.setAttribute('aria-hidden','false');
-    },650);
-  }
-
-  const closeBanner=function(){
-    banner.classList.remove('is-visible');
-    banner.setAttribute('aria-hidden','true');
-  };
-
-  closeButton.addEventListener('click',closeBanner);
-  todayButton.addEventListener('click',function(){
-    localStorage.setItem(HIDE_KEY,today);
-    closeBanner();
-  });
-  moreButton.addEventListener('click',function(){
-    const expanded=banner.classList.toggle('is-expanded');
-    moreButton.setAttribute('aria-expanded',String(expanded));
-    moreButton.textContent=expanded?'간단히 보기':'이벤트 자세히 보기';
-  });
-})();
-</script>
 <div class="mobile-bottom-nav" aria-label="모바일 빠른 메뉴">
 <a class="mobile-bottom-call" href="tel:01028945687">전화</a>
 <a class="mobile-bottom-cases" href="/cases/">작업후기</a>
